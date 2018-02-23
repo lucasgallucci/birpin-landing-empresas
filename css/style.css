@@ -120,10 +120,18 @@ section {
 .empresas {
   display: flex;
   padding: 0;
-  margin: 20px 0; }
+  margin: 40px 0;
+  align-items: center; }
   .empresas li {
     list-style: none;
-    margin: 0 15px; }
+    margin: 0 15px;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .empresas li img {
+      max-height: 90px; }
 
 .mkt {
   background: rgba(255, 255, 255, 0.3);

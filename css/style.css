@@ -8,7 +8,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Rubik; }
 
 header {
-  max-height: 600px;
+  max-height: 700px;
   overflow: hidden;
   background: rgba(0, 0, 0, 0.2) url("../imagenes/filter.png") repeat; }
   header .marca {
@@ -125,9 +125,13 @@ section {
     list-style: none;
     margin: 0 15px; }
 
-.mkt li {
-  font-size: 20px;
-  margin-bottom: 20px;
-  font-weight: 300; }
+.mkt {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 20px; }
+  .mkt p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 300;
+    text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,7 +1,7 @@
 @import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700,900|Rubik:300,400,500,700');
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
-
+@import "http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css";
 
 body{
 	font-family: Roboto;
@@ -13,10 +13,10 @@ h1, h2, h3, h4, h5, h6{
 
 
 header{
-	max-height: 700px;
+	max-height: 600px;
 	overflow: hidden;
 	background: rgba(0,0,0,0.2) url("../imagenes/filter.png") repeat;
-
+	position: relative;
 	.marca{
 		margin-bottom: 140px;
 		.birpin{
@@ -30,28 +30,10 @@ header{
 
 		padding: 20px 0 150px 0;
 		@media (max-width: 768px){
-			background: rgba(0,0,0,0.5) url("../img/filter.png") repeat;
+			background: rgba(0,0,0,0.5) url("../img/back.png");
+			background-size: cover;
 			position: relative;
 			height: 100%;
-		}
-
-		form{
-			margin-top: 40px;
-			legend{
-				color: white;
-				text-transform: uppercase;
-				margin: 10px 0;
-				border: none;
-				font-size: 16px;
-			}
-
-			input[type=email]{
-				min-width: 320px;
-			    margin-right: -10px;
-			    border-radius: 4px 0 0 4px;
-			    z-index: 9;
-    			position: relative;
-			}
 		}
 	}
 	
@@ -73,7 +55,7 @@ header{
 	    width: auto;
 	    height: auto;
 	    z-index: -100;
-	    top: -100px;
+	    top: -300px;
 	    transform: translateX(-50%);
 	 	background: url('../img/fuego.jpg') no-repeat;
 	  	background-size: cover;
@@ -84,6 +66,49 @@ header{
 	  	}
 	}
 
+}
+
+
+section#form{
+	position: relative;
+	.form{
+		padding: 15px;
+		background: white;
+		border-radius: 5px;
+		z-index: 1000;
+		position: absolute;
+		top: -180px;
+		-webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+		border-top: 5px solid #FF9900;
+		
+		form{
+			legend{
+				color: #333;
+				text-transform: uppercase;
+				margin: 15px 0;
+				border: none;
+				text-align: center;
+				font-size: 16px;
+			}
+
+			input{
+			    font-weight: 300;
+			
+			    &[type=submit]{
+					/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff9900+0,fd151b+100 */
+					background: rgb(255,153,0); /* Old browsers */
+					background: -moz-linear-gradient(-45deg, rgba(255,153,0,1) 0%, rgba(253,21,27,1) 100%); /* FF3.6-15 */
+					background: -webkit-linear-gradient(-45deg, rgba(255,153,0,1) 0%,rgba(253,21,27,1) 100%); /* Chrome10-25,Safari5.1-6 */
+					background: linear-gradient(135deg, rgba(255,153,0,1) 0%,rgba(253,21,27,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9900', endColorstr='#fd151b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+					color: white;
+					border: none;
+					text-transform: uppercase;
+			    }
+			}
+		}
+	}
 }
 
 section{
@@ -136,15 +161,34 @@ section{
 	background: linear-gradient(135deg, rgba(255,153,0,1) 0%,rgba(253,21,27,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9900', endColorstr='#fd151b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 	color: white;
-
+	padding: 0;
 	strong{
 		background: white;
 		padding: 0 5px;
 		color: rgba(66,127,151,1);
 	}
+
+	.mask{
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding: 100px 0;
+		background-position: left;
+	}
+
+	strong{
+		background: white;
+		padding: 0 5px;
+		color: #154e77;
+	}
 }
 
 
+#empresas{
+	padding: 60px 0 50px 0;
+	h4{
+		font-size: 30px;
+	}
+}
 .empresas{
 	display: flex;
 	padding: 0;
@@ -152,17 +196,85 @@ section{
 	align-items:center;
 	li{
 		list-style: none;
-		margin: 0 15px;
+		padding: 0 15px;
 		text-align: center;
+		box-sizing: border-box;
 		flex: 1;
 		display: flex;
 		align-items: center;
     	justify-content: center;
 		img{
-			max-height: 90px;
+			max-height: 80px;
+		}
+	}
+
+	@media (max-width: 1000px){
+		flex-wrap: wrap;
+		li{
+			min-width: 25%;
+			margin-bottom: 50px;
+		}
+	}
+
+	@media (max-width: 480px){
+		flex-wrap: wrap;
+		li{
+			min-width: 40%;
+			margin-bottom: 30px;
 		}
 	}
 }
+
+
+
+footer{
+	background: #4d4d4d;
+	padding: 10px 0;
+	.social{
+		display: flex;
+		padding: 0;
+		margin: 40px 0;
+		align-items:center;
+		justify-content: center;
+		li{
+			list-style: none;
+			padding: 0 20px;
+			text-align: center;
+			box-sizing: border-box;
+			display: flex;
+			align-items: center;
+	    	justify-content: center;
+	    	a{
+	    		color: white;
+	    		transition: .5s;
+	    		span{
+					font-size: 30px;
+				}
+	    		&:hover{
+	    			transform: scale(1.2);
+	    		}
+	    	}		
+		}
+	}
+
+	.tyc{
+		display: flex;
+		padding: 0;
+		margin: 40px 0;
+		align-items:center;
+		list-style: none;
+		justify-content: center;
+		li{
+			margin: 0 10px;
+			color: white;
+			a{
+				color: white;
+			}
+		}
+	}	
+}
+
+
 
 
 .mkt{
@@ -173,5 +285,34 @@ section{
 		margin-bottom: 20px;
 		font-weight: 300;
 		text-align: center;
+	}
+}
+
+
+
+.input{
+	position: relative;
+	input{
+		border: none;
+		box-shadow: none;
+	    border-bottom: 1px solid #ccc;
+	    border-radius: 0;
+	    &:focus{
+	    	box-shadow: none;
+	    }
+	}
+	label{
+		font-size: 10px;
+		font-weight: 300;
+		color:#aaa;
+		text-transform: uppercase;
+		transition: .5s;	
+	}
+	
+	&.no{
+		label{
+		    transform: scale(1.2) translate(5px,25px);
+		
+		}
 	}
 }

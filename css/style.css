@@ -17,6 +17,10 @@ header {
     margin-bottom: 140px; }
     header .marca .birpin {
       max-width: 120px; }
+  @media (max-width: 768px) {
+    header {
+      background: rgba(0, 0, 0, 0.5) url("../imagenes/back.jpg");
+      background-size: cover; } }
   header #header {
     position: absolute;
     top: 0;
@@ -24,8 +28,6 @@ header {
     padding: 20px 0 150px 0; }
     @media (max-width: 768px) {
       header #header {
-        background: rgba(0, 0, 0, 0.5) url("../img/back.png");
-        background-size: cover;
         position: relative;
         height: 100%; } }
   header h1 {
@@ -34,6 +36,17 @@ header {
     font-weight: 300; }
     header h1 strong {
       font-weight: 700; }
+    @media (max-width: 768px) {
+      header h1 {
+        position: relative;
+        top: -100px;
+        text-shadow: 0 0 8px rgba(0, 0, 0, 0.5); } }
+    @media (max-width: 550px) {
+      header h1 {
+        font-size: 30px; } }
+    @media (max-width: 450px) {
+      header h1 {
+        font-size: 26px; } }
   header video {
     position: relative;
     left: 50%;
@@ -44,7 +57,7 @@ header {
     z-index: -100;
     top: -300px;
     transform: translateX(-50%);
-    background: url("../img/fuego.jpg") no-repeat;
+    background: url("../img/back.jpg") no-repeat;
     background-size: cover;
     transition: 1s opacity; }
     @media (max-width: 768px) {
@@ -87,6 +100,9 @@ section#form {
         color: white;
         border: none;
         text-transform: uppercase; }
+        @media (max-width: 450px) {
+          section#form .form form input[type=submit] {
+            font-size: 14px; } }
 
 section {
   padding: 100px 0; }

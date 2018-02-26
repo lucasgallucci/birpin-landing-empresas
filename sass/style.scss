@@ -23,15 +23,18 @@ header{
 			max-width: 120px;
 		}
 	}
+
+	@media (max-width: 768px){
+		background: rgba(0,0,0,0.5) url("../imagenes/back.jpg");
+		background-size: cover;
+	}
+
 	#header{
 		position: absolute;
 		top: 0;
 		width: 100%;
-
 		padding: 20px 0 150px 0;
 		@media (max-width: 768px){
-			background: rgba(0,0,0,0.5) url("../img/back.png");
-			background-size: cover;
 			position: relative;
 			height: 100%;
 		}
@@ -45,6 +48,20 @@ header{
 		strong{
 			font-weight: 700;
 		}
+
+		@media (max-width: 768px){
+			position: relative;
+			top: -100px;
+			text-shadow: 0 0 8px rgba(0,0,0,0.5);
+		}
+
+		@media (max-width: 550px){
+			font-size: 30px;
+		}
+
+		@media (max-width: 450px){
+			font-size: 26px;
+		}
 	}
 
 	video { 
@@ -57,7 +74,7 @@ header{
 	    z-index: -100;
 	    top: -300px;
 	    transform: translateX(-50%);
-	 	background: url('../img/fuego.jpg') no-repeat;
+	 	background: url('../img/back.jpg') no-repeat;
 	  	background-size: cover;
 	  	transition: 1s opacity;
 
@@ -105,8 +122,13 @@ section#form{
 					color: white;
 					border: none;
 					text-transform: uppercase;
+					@media (max-width: 450px){
+						font-size: 14px;
+					}
 			    }
 			}
+
+			
 		}
 	}
 }

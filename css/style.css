@@ -68,7 +68,8 @@ header {
 section#form {
   position: relative; }
   section#form .absolute {
-    position: absolute; }
+    position: absolute;
+    width: 100%; }
   section#form .form {
     padding: 15px;
     background: white;
